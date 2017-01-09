@@ -1,29 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router';
 import Action from './Action';
 import Actions from './Actions';
-import { getActions } from '../../data/actions';
 
-var customAction;
+// @todo use oauth, this is for demo purpose
+window.cmaKey = 'ed799bbf8abe90519cd4a742d026ac79ae2bc2655c22427258f9574ccef36481'
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.setCMAKey = this.setCMAKey.bind(this)
+  }
+  setCMAKey(ev) {
+    window.cmaKey = ev.target.value; // @todo don't care about globals, it's a prototype
+  }
   render() {
-    const props = this.props;
-    const state = this.state;
-
-    if (!state || !state.actions) {
-        getActions().then((actions) => this.setState({ actions }))
-      return <div className="loading text-center">Loading...</div>;
-    } else {
-      return <div className="container">
-        <div className="col-xs-6">
-          <h2>Incoming actions</h2>
-          <Actions items={state.actions}/>
-        </div>
-        <div className="col-xs-6">
-          <h2>Available pages</h2>
-        </div>
-      </div>
-    }
+    return <div className="container">
+      <p className="clearfix">
+        <input className="pull-right" type="text" placeholder="Enter CMA key" value={window.cmaKey}
+          onChange={this.setCMAKey} />
+      </p>
+      <Router history={hashHistory} >
+        <Route path="/storytelling" component={Actions} />
+        <Route path="/storytelling/action/:id" component={Action} />
+      </Router>
+    </div>
   }
 }

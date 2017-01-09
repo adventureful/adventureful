@@ -8,7 +8,7 @@ import StorytellingAction from './components/storytelling/Action';
 ReactDOM.render(
   <Router history={hashHistory} >
     <Route path="/storytelling" component={StorytellingApp} />
-    <Route path="/storytelling/action/:id" component={StorytellingAction} />
+    <Route path="/storytelling/action/:id" component={StorytellingApp} />
     <Route path="/" component={App} />
     <Route path="/:id" component={App} />
   </Router>, document.getElementById('root'));
