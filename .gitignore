@@ -39,3 +39,17 @@ jspm_packages
 
 site/build
 .DS_Store
+
+# IntelliJ files
+*.idea/
+*.iml
+
+*.class
+**target/
+**build/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
