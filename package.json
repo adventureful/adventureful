@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p site/build && npm run styles",
+    "styles": "stylus --include node_modules/bootstrap-styl < site/styles/index.styl > site/build/index.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/panuru/adventureful/issues"
   },
-  "homepage": "https://github.com/panuru/adventureful#readme"
+  "homepage": "https://github.com/panuru/adventureful#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "bootstrap-styl": "^5.0.8",
+    "contentful": "^3.8.0",
+    "contentful-management": "^1.3.0",
+    "stylus": "^0.54.5"
+  }
 }
