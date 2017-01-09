@@ -1,18 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Page from './components/Page';
-import Choices from './components/Choices';
+import App from './components/App';
 import { getBook } from './data/book';
 import { getPage } from './data/page';
 
-getBook()
-  .then((book) => getPage(book.fields.startingPage))
-  .then((page) =>
+function gotoPage(id) {
+  getPage(id).then((page) =>
     ReactDOM.render(
-      <form className="container">
-        <Page fields={page.fields} sys={page.sys}/>
-        <Choices items={page.fields.nextPage}/>
-        <input className="form-control" type="text" />
-      </form>,
+      <App currentPage={page} onSelect={(item) => { gotoPage(item.sys.id) } }/>,
       document.getElementById('root')
     ));
+}
+
+getBook().then((book) => gotoPage(book.fields.startingPage.sys.id));
