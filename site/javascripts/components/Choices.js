@@ -10,5 +10,5 @@ export default function render(props) {
     <li className="list-group-item" key={item.sys.id}>
       <Link to={{ pathname: '/' + item.fields.link.sys.id }} >{item.fields.name}</Link>
     </li>)
-  return <ul className="list-group choices">{items}</ul>
-}
+    return <div><p>What do you do? <span className="typed-cursor">|</span></p><ul className="list-group choices">{items}</ul></div>
+  }
