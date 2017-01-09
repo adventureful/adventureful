@@ -3,7 +3,8 @@
 ## Prerequisites
 
 - Java SDK
-- maven
+- Maven
+- Chrome browser
 
 ### To run
 
@@ -13,4 +14,4 @@ where
 
 `choices` - number of choices to be made in test;
 
-`timeout` - timeout, to show the next step
+`timeout` - timeout, to show the next step;
