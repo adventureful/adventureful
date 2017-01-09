@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panuru/adventureful.git"
+    "url": "git@github.com:adventureful/adventureful.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/panuru/adventureful/issues"
+    "url": "git@github.com:adventureful/adventureful.git/issues"
   },
-  "homepage": "https://github.com/panuru/adventureful#readme",
+  "homepage": "git@github.com:adventureful/adventureful.git#readme",
   "dependencies": {
     "babel": "^6.5.2",
     "bootstrap-styl": "^5.0.8",
