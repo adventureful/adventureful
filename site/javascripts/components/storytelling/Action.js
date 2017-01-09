@@ -47,8 +47,8 @@ export default class Action extends React.Component {
         <h2>{state.page.fields.title}</h2>
         <p>{state.page.fields.body}</p>
         <p>> {state.action.text}</p>
-        <textarea className="form-control" onBlur={this.setBody} />
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <p><textarea className="form-control" onBlur={this.setBody} /></p>
+        <button type="submit" className="btn btn-primary">Narrate</button>
       </form>
     }
   }

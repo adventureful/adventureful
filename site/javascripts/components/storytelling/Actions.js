@@ -17,6 +17,9 @@ export default class Actions extends React.Component {
           {`"${item.text}" @ "${item.page.fields.title}"`}
         </Link>
       </li>)
-    return <ul className="list-group actions">{items}</ul>
+    return <div>
+      <p>Here is what people want to do:</p>
+      <ul className="list-group actions">{items}</ul>
+    </div>
   }
 }
