@@ -32,6 +32,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <choices>20</choices>
+                        <timeout>3000</timeout>
                         <selenide.baseUrl>http://adventureful.netlify.com</selenide.baseUrl>
                         <selenide.browser>CHROME</selenide.browser>
                     </systemPropertyVariables>
