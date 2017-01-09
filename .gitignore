@@ -53,3 +53,9 @@ site/build
 *.war
 *.ear
 
+#android
+
+build/
+android/build
+*iml
+.idea/*
