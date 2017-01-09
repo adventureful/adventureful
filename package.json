@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir -p site/build && npm run styles",
-    "styles": "stylus --include node_modules/bootstrap-styl < site/styles/index.styl > site/build/index.css"
+    "build": "mkdir -p site/build && npm run styles && npm run js",
+    "styles": "stylus --include node_modules/bootstrap-styl < site/styles/index.styl > site/build/index.css",
+    "js": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,21 @@
   "homepage": "git@github.com:adventureful/adventureful.git#readme",
   "dependencies": {
     "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
     "bootstrap-styl": "^5.0.8",
     "contentful": "^3.8.0",
     "contentful-management": "^1.3.0",
-    "stylus": "^0.54.5"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "stylus": "^0.54.5",
+    "webpack": "^2.2.0-rc.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "webpack": "^2.2.0-rc.3"
   }
 }
