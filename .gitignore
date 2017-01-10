@@ -59,3 +59,5 @@ build/
 android/build
 *iml
 .idea/*
+.gradle/
+android/local.properties
