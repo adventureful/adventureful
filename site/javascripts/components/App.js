@@ -42,8 +42,9 @@ export default class App extends React.Component {
     }
     if (!state.page || (pageId && state.page.sys.id !== pageId)) {
       this.load(pageId);
-      return <div className="loading text-center">Loading...</div>;
+      return <div className="container loading">Loading<span className="typed-cursor">...</span></div>;
     }
+
     return <form className="container" onSubmit={this.onSubmit}>
       <Page fields={state.page.fields} sys={state.page.sys}/>
       <Choices items={state.page.fields.nextPage}/>
